@@ -1,0 +1,288 @@
+/* Animations CSS for Dubai Yacht Registration Website */
+
+/* Wave Animation for Hero Sections */
+.wave-animation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%23ffffff"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="%23ffffff"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23ffffff"/></svg>');
+    background-size: 1200px 100px;
+    animation: wave 20s linear infinite;
+    z-index: 1;
+  }
+  
+  .wave-animation:nth-child(2) {
+    bottom: 10px;
+    opacity: 0.5;
+    animation: wave 15s linear infinite reverse;
+  }
+  
+  .wave-animation:nth-child(3) {
+    bottom: 20px;
+    opacity: 0.2;
+    animation: wave 10s linear infinite;
+  }
+  
+  @keyframes wave {
+    0% {
+      background-position-x: 0;
+    }
+    100% {
+      background-position-x: 1200px;
+    }
+  }
+  
+  /* Floating Animation for Icons and Elements */
+  .float-animation {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  /* Boat Animation */
+  .boat-animation {
+    position: absolute;
+    bottom: 50px;
+    left: -150px;
+    width: 120px;
+    height: 60px;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256,56c-114.9,0-208,93.1-208,208s93.1,208,208,208s208-93.1,208-208S370.9,56,256,56z" fill="%231e40af" opacity="0"/><path d="M352,128H160c-8.8,0-16,7.2-16,16v128h224V144C368,135.2,360.8,128,352,128z" fill="%231e40af"/><path d="M384,272H128c0,0-32,32-32,64s32,48,160,48s160-16,160-48S384,272,384,272z" fill="%231e40af"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: boat 30s linear infinite;
+    z-index: 2;
+  }
+  
+  @keyframes boat {
+    0% {
+      transform: translateX(0) rotate(0deg);
+    }
+    25% {
+      transform: translateX(calc(50vw)) rotate(2deg);
+    }
+    50% {
+      transform: translateX(calc(100vw + 150px)) rotate(-2deg);
+    }
+    50.01% {
+      transform: translateX(-150px) rotate(0deg);
+    }
+    75% {
+      transform: translateX(calc(50vw)) rotate(2deg);
+    }
+    100% {
+      transform: translateX(calc(100vw + 150px)) rotate(-2deg);
+    }
+  }
+  
+  /* Fade In Animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Slide In Animations */
+  .slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .slide-in-left.visible,
+  .slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Zoom In Animation */
+  .zoom-in {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .zoom-in.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* Rotating Animation for Icons */
+  .rotate-animation {
+    animation: rotate 10s linear infinite;
+    transform-origin: center;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Pulse Animation */
+  .pulse-animation {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Counter Animation */
+  .counter-animation {
+    display: inline-block;
+    position: relative;
+  }
+  
+  /* Shimmer Effect for CTA Buttons */
+  .btn-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-shimmer::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    animation: shimmer 3s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%) rotate(30deg);
+    }
+    100% {
+      transform: translateX(100%) rotate(30deg);
+    }
+  }
+  
+  /* Water Ripple Effect */
+  .ripple-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    background: radial-gradient(circle, transparent 10%, #1e40af 10%) 0 0;
+    background-size: 20px 20px;
+    animation: ripple 10s linear infinite;
+  }
+  
+  @keyframes ripple {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 20px 20px;
+    }
+  }
+  
+  /* Typing Animation for Headlines */
+  .typing-animation {
+    overflow: hidden;
+    border-right: 0.15em solid #1e40af;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #1e40af }
+  }
+  
+  /* Parallax Effect */
+  .parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Anchor Animation */
+  .anchor-animation {
+    animation: anchor-sway 3s ease-in-out infinite;
+    transform-origin: top center;
+  }
+  
+  @keyframes anchor-sway {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  /* Prefers Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    
+    .wave-animation,
+    .float-animation,
+    .boat-animation,
+    .rotate-animation,
+    .pulse-animation,
+    .btn-shimmer::after,
+    .ripple-background,
+    .typing-animation,
+    .anchor-animation {
+      animation: none !important;
+    }
+  }

@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "shamsa_marine",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
