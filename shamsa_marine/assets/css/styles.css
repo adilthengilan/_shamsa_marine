@@ -292,7 +292,7 @@
     height: 100vh;
     background-color: white;
     box-shadow: -4px 0 6px -1px rgba(0, 0, 0, 0.1);
-    z-index: 999;
+    z-index: 9999;
     transform: translateX(100%);
     transition: transform 0.3s ease;
     overflow-y: auto;
@@ -1384,6 +1384,18 @@
     gap: 1rem;
     flex-wrap: wrap;
   }
+
+  .mobile-menu-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    color: #000; /* or your theme color */
+}
+
   
   .social-link {
     width: 2.5rem;
