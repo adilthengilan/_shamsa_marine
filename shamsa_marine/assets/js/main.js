@@ -422,18 +422,20 @@ function toggleMobileMenu() {
   })
   
   // Add active class to current page navigation
-  document.addEventListener("DOMContentLoaded", () => {
-    const currentPage = window.location.pathname.split("/").pop() || "index.html"
-    const navLinks = document.querySelectorAll(".nav-link, .mobile-nav-link")
-  
-    navLinks.forEach((link) => {
-      const href = link.getAttribute("href")
-      if (href === currentPage || (currentPage === "" && href === "index.html")) {
-        link.classList.add("active")
-        link.setAttribute("aria-current", "page")
-      }
-    })
-  })
+  document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+    const currentPage = window.location.pathname.split('/').pop();
+
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute('href');
+
+        if (linkPage === currentPage) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+})
   
   // Intersection Observer for animations with improved performance
   const observerOptions = {
